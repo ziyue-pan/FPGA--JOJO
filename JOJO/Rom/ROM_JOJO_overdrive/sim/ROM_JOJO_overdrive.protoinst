@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"ROM_JOJO_overdrive": {
+			"proto_instances": {
+			}
+		}
+	}
+}

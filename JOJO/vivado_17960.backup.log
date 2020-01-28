@@ -1,0 +1,827 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Jan  5 09:18:46 2020
+# Process ID: 17960
+# Current directory: C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10908 C:\Users\Raymond-Ziyue\Desktop\Proj\JOJO\JOJO.xpr
+# Log file: C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/vivado.log
+# Journal file: C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/JOJO.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Raymond-Ziyue/Desktop/JOJO' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [filemgmt 56-1] IPUserFilesDir: Directory not found as 'C:/Users/Raymond-Ziyue/Desktop/Proj/course/LCDF/Lab/Proj/JOJO/JOJO.ip_user_files'; using path 'C:/Users/Raymond-Ziyue/Desktop/course/LCDF/Lab/Proj/JOJO/JOJO.ip_user_files' instead.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 719.793 ; gain = 92.418
+update_compile_order -fileset sources_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gamecover/ROM_Gamecover.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Background/ROM_Background.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_normal/ROM_Mask_normal.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_crazy/ROM_Mask_crazy.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO_overdrive/ROM_JOJO_overdrive.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO/ROM_JOJO.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/ROM_Bubble.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/ROM_Gameover.bd]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k160tffg676-2L
+Top: Top_module
+INFO: [Device 21-403] Loading part xc7k160tffg676-2L
+WARNING: [Synth 8-6901] identifier 'DATA_BITS' is used before its declaration [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/P2S_IO.v:24]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1301.949 ; gain = 62.125
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top_module' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Top_module.v:1]
+	Parameter gamestart bound to: 3'b001 
+	Parameter gameover bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'FSM' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/FSM.v:1]
+	Parameter Initial bound to: 3'b000 
+	Parameter Start bound to: 3'b001 
+	Parameter Play bound to: 3'b010 
+	Parameter Collision bound to: 3'b011 
+	Parameter Gameover bound to: 3'b100 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/FSM.v:46]
+WARNING: [Synth 8-6014] Unused sequential element enter_reg_reg was removed.  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/FSM.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'FSM' (1#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/FSM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'GUI_Gameover' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/GUI_Gameover.v:1]
+	Parameter H_Range bound to: 640 - type: integer 
+	Parameter V_Range bound to: 480 - type: integer 
+	Parameter V_Deviation bound to: 100 - type: integer 
+	Parameter H_Deviation bound to: 192 - type: integer 
+	Parameter ROM_Width bound to: 256 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ROM_Gameover_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/hdl/ROM_Gameover_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Gameover' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/synth/ROM_Gameover.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Gameover_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Gameover_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Gameover_blk_mem_gen_0_0' (2#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Gameover_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Gameover' (3#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/synth/ROM_Gameover.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Gameover_wrapper' (4#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/hdl/ROM_Gameover_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (15) of module 'ROM_Gameover_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/GUI_Gameover.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'GUI_Gameover' (5#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/GUI_Gameover.v:1]
+INFO: [Synth 8-6157] synthesizing module 'GUI_Heart' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/GUI_Heart.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Heart' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_heart.v:1]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_heart.v:11]
+INFO: [Synth 8-226] default block is never used [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_heart.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Heart' (6#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_heart.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'GUI_Heart' (7#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/GUI_Heart.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Item_Bubble' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Item_Bubble.v:1]
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter waiting bound to: 1'b0 
+	Parameter respawn bound to: 1'b1 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Item_Bubble.v:76]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Bubble_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/hdl/ROM_Bubble_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Bubble' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/synth/ROM_Bubble.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Bubble_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Bubble_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Bubble_blk_mem_gen_0_0' (8#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Bubble_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Bubble' (9#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/synth/ROM_Bubble.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Bubble_wrapper' (10#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/hdl/ROM_Bubble_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (11) of module 'ROM_Bubble_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Item_Bubble.v:139]
+WARNING: [Synth 8-3848] Net bubble_on in module/entity Item_Bubble does not have driver. [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Item_Bubble.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Item_Bubble' (11#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Item_Bubble.v:1]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Top_module.v:96]
+INFO: [Synth 8-6157] synthesizing module 'Judge_Collision' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Judge_Collision.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Judge_Collision' (12#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Judge_Collision.v:1]
+ERROR: [Synth 8-448] named port connection 'direction' does not exist for instance 'collision_unit' of module 'Judge_Collision' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Top_module.v:97]
+INFO: [Synth 8-6157] synthesizing module 'Judge_Grounded' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Judge_Grounded.v:1]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter T_W bound to: 32 - type: integer 
+	Parameter T_H bound to: 32 - type: integer 
+	Parameter LA bound to: 19 - type: integer 
+	Parameter LB bound to: 13 - type: integer 
+	Parameter RA bound to: 11 - type: integer 
+	Parameter RB bound to: 5 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+ERROR: [Synth 8-6156] failed synthesizing module 'Judge_Grounded' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Judge_Grounded.v:1]
+ERROR: [Synth 8-6156] failed synthesizing module 'Top_module' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Top_module.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1351.535 ; gain = 111.711
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+31 Infos, 6 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k160tffg676-2L
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Background/ip/ROM_Background_blk_mem_gen_0_0/ROM_Background_blk_mem_gen_0_0.dcp' for cell 'background_unit/ROM_Background_i/ROM_Background'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/ip/ROM_Bubble_blk_mem_gen_0_0/ROM_Bubble_blk_mem_gen_0_0.dcp' for cell 'bubble_unit/rom_bubble_unit/ROM_Bubble_i/ROM_Bubble'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gamecover/ip/ROM_Gamecover_blk_mem_gen_0_0/ROM_Gamecover_blk_mem_gen_0_0.dcp' for cell 'gamecover_unit/ROM_Gamecover_i/ROM_Gamecover'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/ip/ROM_Gameover_blk_mem_gen_0_0/ROM_Gameover_blk_mem_gen_0_0.dcp' for cell 'gameover_unit/rom_gameover/ROM_Gameover_i/ROM_Gameover'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO_overdrive/ip/ROM_JOJO_overdrive_blk_mem_gen_0_0/ROM_JOJO_overdrive_blk_mem_gen_0_0.dcp' for cell 'jojo_unit/jojo_overdrive_unit/ROM_JOJO_overdrive_i/ROM_JOJO_overdrive'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO/ip/ROM_JOJO_blk_mem_gen_0_0/ROM_JOJO_blk_mem_gen_0_0.dcp' for cell 'jojo_unit/jojo_unit/ROM_JOJO_i/ROM_JOJO'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_normal/ip/ROM_Mask_normal_blk_mem_gen_0_0/ROM_Mask_normal_blk_mem_gen_0_0.dcp' for cell 'mask_bottom_unit/rom_mask_bottom_unit/ROM_Mask_normal_i/ROM_Mask_normal'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_crazy/ip/ROM_Mask_crazy_blk_mem_gen_0_0/ROM_Mask_crazy_blk_mem_gen_0_0.dcp' for cell 'mask_crazy_unit/mask_crazy_unit/ROM_Mask_crazy_i/ROM_Mask_crazy'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.159 . Memory (MB): peak = 1380.813 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 841 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/XDC.xdc]
+Finished Parsing XDC File [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/XDC.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1447.699 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 1575.645 ; gain = 194.832
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Sun Jan  5 09:23:09 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/JOJO.runs/synth_1/runme.log
+add_files -norecurse C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/B2BCD.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Sun Jan  5 09:24:52 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/JOJO.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k160tffg676-2L
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Background/ip/ROM_Background_blk_mem_gen_0_0/ROM_Background_blk_mem_gen_0_0.dcp' for cell 'background_unit/ROM_Background_i/ROM_Background'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/ip/ROM_Bubble_blk_mem_gen_0_0/ROM_Bubble_blk_mem_gen_0_0.dcp' for cell 'bubble_unit/rom_bubble_unit/ROM_Bubble_i/ROM_Bubble'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gamecover/ip/ROM_Gamecover_blk_mem_gen_0_0/ROM_Gamecover_blk_mem_gen_0_0.dcp' for cell 'gamecover_unit/ROM_Gamecover_i/ROM_Gamecover'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/ip/ROM_Gameover_blk_mem_gen_0_0/ROM_Gameover_blk_mem_gen_0_0.dcp' for cell 'gameover_unit/rom_gameover/ROM_Gameover_i/ROM_Gameover'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO_overdrive/ip/ROM_JOJO_overdrive_blk_mem_gen_0_0/ROM_JOJO_overdrive_blk_mem_gen_0_0.dcp' for cell 'jojo_unit/jojo_overdrive_unit/ROM_JOJO_overdrive_i/ROM_JOJO_overdrive'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO/ip/ROM_JOJO_blk_mem_gen_0_0/ROM_JOJO_blk_mem_gen_0_0.dcp' for cell 'jojo_unit/jojo_unit/ROM_JOJO_i/ROM_JOJO'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_normal/ip/ROM_Mask_normal_blk_mem_gen_0_0/ROM_Mask_normal_blk_mem_gen_0_0.dcp' for cell 'mask_bottom_unit/rom_mask_bottom_unit/ROM_Mask_normal_i/ROM_Mask_normal'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_crazy/ip/ROM_Mask_crazy_blk_mem_gen_0_0/ROM_Mask_crazy_blk_mem_gen_0_0.dcp' for cell 'mask_crazy_unit/mask_crazy_unit/ROM_Mask_crazy_i/ROM_Mask_crazy'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.153 . Memory (MB): peak = 2054.648 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 825 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/XDC.xdc]
+Finished Parsing XDC File [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/XDC.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2070.320 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2117.078 ; gain = 70.688
+close_design
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gamecover/ROM_Gamecover.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Background/ROM_Background.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_normal/ROM_Mask_normal.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_crazy/ROM_Mask_crazy.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO_overdrive/ROM_JOJO_overdrive.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO/ROM_JOJO.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/ROM_Bubble.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/ROM_Gameover.bd]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k160tffg676-2L
+Top: Top_module
+WARNING: [Synth 8-6901] identifier 'DATA_BITS' is used before its declaration [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/P2S_IO.v:24]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2138.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top_module' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Top_module.v:1]
+	Parameter gamestart bound to: 3'b001 
+	Parameter gameover bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'FSM' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/FSM.v:1]
+	Parameter Initial bound to: 3'b000 
+	Parameter Start bound to: 3'b001 
+	Parameter Play bound to: 3'b010 
+	Parameter Collision bound to: 3'b011 
+	Parameter Gameover bound to: 3'b100 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/FSM.v:46]
+WARNING: [Synth 8-6014] Unused sequential element enter_reg_reg was removed.  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/FSM.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'FSM' (1#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/FSM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'GUI_Gameover' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/GUI_Gameover.v:1]
+	Parameter H_Range bound to: 640 - type: integer 
+	Parameter V_Range bound to: 480 - type: integer 
+	Parameter V_Deviation bound to: 100 - type: integer 
+	Parameter H_Deviation bound to: 192 - type: integer 
+	Parameter ROM_Width bound to: 256 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ROM_Gameover_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/hdl/ROM_Gameover_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Gameover' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/synth/ROM_Gameover.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Gameover_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Gameover_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Gameover_blk_mem_gen_0_0' (2#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Gameover_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Gameover' (3#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/synth/ROM_Gameover.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Gameover_wrapper' (4#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/hdl/ROM_Gameover_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (15) of module 'ROM_Gameover_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/GUI_Gameover.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'GUI_Gameover' (5#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/GUI_Gameover.v:1]
+INFO: [Synth 8-6157] synthesizing module 'GUI_Heart' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/GUI_Heart.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Heart' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_heart.v:1]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_heart.v:11]
+INFO: [Synth 8-226] default block is never used [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_heart.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Heart' (6#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_heart.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'GUI_Heart' (7#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/GUI_Heart.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Item_Bubble' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Item_Bubble.v:1]
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter waiting bound to: 1'b0 
+	Parameter respawn bound to: 1'b1 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Item_Bubble.v:76]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Bubble_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/hdl/ROM_Bubble_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Bubble' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/synth/ROM_Bubble.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Bubble_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Bubble_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Bubble_blk_mem_gen_0_0' (8#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Bubble_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Bubble' (9#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/synth/ROM_Bubble.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Bubble_wrapper' (10#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/hdl/ROM_Bubble_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (11) of module 'ROM_Bubble_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Item_Bubble.v:139]
+WARNING: [Synth 8-3848] Net bubble_on in module/entity Item_Bubble does not have driver. [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Item_Bubble.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Item_Bubble' (11#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Item_Bubble.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Judge_Collision' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Judge_Collision.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Judge_Collision' (12#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Judge_Collision.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Judge_Grounded' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Judge_Grounded.v:1]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter T_W bound to: 32 - type: integer 
+	Parameter T_H bound to: 32 - type: integer 
+	Parameter LA bound to: 19 - type: integer 
+	Parameter LB bound to: 13 - type: integer 
+	Parameter RA bound to: 11 - type: integer 
+	Parameter RB bound to: 5 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Judge_Grounded' (13#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Judge_Grounded.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Map_Platform' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Map_Platform.v:1]
+	Parameter Block_Width bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ROM_Wall' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Wall.v:1]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Wall.v:11]
+INFO: [Synth 8-226] default block is never used [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Wall.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Wall' (14#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Wall.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Block' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Block.v:1]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Block.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Block' (15#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Block.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Map_Platform' (16#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Map_Platform.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PS2' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/PS2.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/PS2.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'PS2' (17#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/PS2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Role_JOJO' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_JOJO.v:1]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter MIN_Y bound to: 16 - type: integer 
+	Parameter T_W bound to: 32 - type: integer 
+	Parameter T_H bound to: 64 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter still bound to: 2'b00 
+	Parameter left bound to: 2'b01 
+	Parameter right bound to: 2'b10 
+	Parameter standing bound to: 3'b000 
+	Parameter walking bound to: 3'b001 
+	Parameter jump_up bound to: 3'b010 
+	Parameter jump_higher bound to: 3'b011 
+	Parameter jump_down bound to: 3'b100 
+	Parameter TIME_START_X bound to: 800000 - type: integer 
+	Parameter TIME_STEP_X bound to: 6000 - type: integer 
+	Parameter TIME_MIN_X bound to: 500000 - type: integer 
+	Parameter TIME_START_Y bound to: 100000 - type: integer 
+	Parameter TIME_STEP_Y bound to: 8000 - type: integer 
+	Parameter TIME_MAX_Y bound to: 600000 - type: integer 
+	Parameter TIME_TERM_Y bound to: 250000 - type: integer 
+	Parameter BEGIN_COUNT_EXTRA bound to: 450000 - type: integer 
+	Parameter TILE_1_MAX bound to: 4000000 - type: integer 
+	Parameter TILE_2_MAX bound to: 8000000 - type: integer 
+	Parameter TILE_3_MAX bound to: 12000000 - type: integer 
+	Parameter TILE_4_MAX bound to: 16000000 - type: integer 
+	Parameter WALK_T_MAX bound to: 20000000 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_JOJO.v:102]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_JOJO.v:180]
+INFO: [Synth 8-6157] synthesizing module 'ROM_JOJO_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO/hdl/ROM_JOJO_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_JOJO' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO/synth/ROM_JOJO.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_JOJO_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_JOJO_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_JOJO_blk_mem_gen_0_0' (18#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_JOJO_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_JOJO' (19#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO/synth/ROM_JOJO.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_JOJO_wrapper' (20#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO/hdl/ROM_JOJO_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (14) of module 'ROM_JOJO_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_JOJO.v:308]
+INFO: [Synth 8-6157] synthesizing module 'ROM_JOJO_overdrive_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO_overdrive/hdl/ROM_JOJO_overdrive_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_JOJO_overdrive' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO_overdrive/synth/ROM_JOJO_overdrive.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_JOJO_overdrive_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_JOJO_overdrive_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_JOJO_overdrive_blk_mem_gen_0_0' (21#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_JOJO_overdrive_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_JOJO_overdrive' (22#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO_overdrive/synth/ROM_JOJO_overdrive.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_JOJO_overdrive_wrapper' (23#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO_overdrive/hdl/ROM_JOJO_overdrive_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (14) of module 'ROM_JOJO_overdrive_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_JOJO.v:309]
+INFO: [Synth 8-6155] done synthesizing module 'Role_JOJO' (24#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_JOJO.v:1]
+INFO: [Synth 8-6157] synthesizing module 'VGA' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/VGA.v:1]
+	Parameter H_Range bound to: 640 - type: integer 
+	Parameter L_Border bound to: 58 - type: integer 
+	Parameter R_Border bound to: 6 - type: integer 
+	Parameter H_Retrace bound to: 96 - type: integer 
+	Parameter H_Max bound to: 799 - type: integer 
+	Parameter H_Start bound to: 646 - type: integer 
+	Parameter H_End bound to: 741 - type: integer 
+	Parameter V_Range bound to: 480 - type: integer 
+	Parameter T_Border bound to: 43 - type: integer 
+	Parameter B_Border bound to: 0 - type: integer 
+	Parameter V_Retrace bound to: 2 - type: integer 
+	Parameter V_Max bound to: 524 - type: integer 
+	Parameter V_Start bound to: 480 - type: integer 
+	Parameter V_End bound to: 481 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'VGA' (25#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/VGA.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Role_Mask_crazy' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_crazy.v:1]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter T_W bound to: 32 - type: integer 
+	Parameter TIME_MAX bound to: 4000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ROM_Mask_crazy_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_crazy/hdl/ROM_Mask_crazy_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Mask_crazy' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_crazy/synth/ROM_Mask_crazy.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Mask_crazy_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Mask_crazy_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Mask_crazy_blk_mem_gen_0_0' (26#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Mask_crazy_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Mask_crazy' (27#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_crazy/synth/ROM_Mask_crazy.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Mask_crazy_wrapper' (28#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_crazy/hdl/ROM_Mask_crazy_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (11) of module 'ROM_Mask_crazy_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_crazy.v:76]
+WARNING: [Synth 8-5788] Register mask_crazy_x_reg_reg in module Role_Mask_crazy is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_crazy.v:33]
+WARNING: [Synth 8-5788] Register mask_crazy_y_reg_reg in module Role_Mask_crazy is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_crazy.v:34]
+WARNING: [Synth 8-5788] Register dir_reg_reg in module Role_Mask_crazy is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_crazy.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'Role_Mask_crazy' (29#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_crazy.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Role_Mask_top' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_top.v:1]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter T_W bound to: 32 - type: integer 
+	Parameter TIME_MAX bound to: 4600000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ROM_Mask_normal_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_normal/hdl/ROM_Mask_normal_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Mask_normal' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_normal/synth/ROM_Mask_normal.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Mask_normal_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Mask_normal_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Mask_normal_blk_mem_gen_0_0' (30#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Mask_normal_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Mask_normal' (31#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_normal/synth/ROM_Mask_normal.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Mask_normal_wrapper' (32#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_normal/hdl/ROM_Mask_normal_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (11) of module 'ROM_Mask_normal_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_top.v:86]
+WARNING: [Synth 8-5788] Register mask_top_x_reg_reg in module Role_Mask_top is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_top.v:37]
+WARNING: [Synth 8-5788] Register mask_top_y_reg_reg in module Role_Mask_top is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_top.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'Role_Mask_top' (33#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Role_Mask_bottom' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_bottom.v:1]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter T_W bound to: 32 - type: integer 
+	Parameter TIME_MAX bound to: 4600000 - type: integer 
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (11) of module 'ROM_Mask_normal_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_bottom.v:87]
+WARNING: [Synth 8-5788] Register mask_bottom_x_reg_reg in module Role_Mask_bottom is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_bottom.v:37]
+WARNING: [Synth 8-5788] Register mask_bottom_y_reg_reg in module Role_Mask_bottom is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_bottom.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'Role_Mask_bottom' (34#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_bottom.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Background_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Background/hdl/ROM_Background_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Background' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Background/synth/ROM_Background.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Background_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Background_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Background_blk_mem_gen_0_0' (35#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Background_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Background' (36#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Background/synth/ROM_Background.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Background_wrapper' (37#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Background/hdl/ROM_Background_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (19) of module 'ROM_Background_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Top_module.v:156]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Gamecover_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gamecover/hdl/ROM_Gamecover_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Gamecover' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gamecover/synth/ROM_Gamecover.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Gamecover_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Gamecover_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Gamecover_blk_mem_gen_0_0' (38#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Gamecover_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Gamecover' (39#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gamecover/synth/ROM_Gamecover.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Gamecover_wrapper' (40#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gamecover/hdl/ROM_Gamecover_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (19) of module 'ROM_Gamecover_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Top_module.v:157]
+INFO: [Synth 8-6157] synthesizing module 'LED_display' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/LED_display.v:1]
+INFO: [Synth 8-6157] synthesizing module 'P2S' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/P2S_IO.v:21]
+	Parameter DATA_BITS bound to: 64 - type: integer 
+	Parameter DATA_COUNT_BITS bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'P2S' (41#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/P2S_IO.v:21]
+INFO: [Synth 8-6157] synthesizing module 'B2BCD' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/B2BCD.v:1]
+	Parameter idle bound to: 1'b0 
+	Parameter convert bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'B2BCD' (42#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/B2BCD.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MC14495_ZJU' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/MC14495_ZJU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'AND4' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:562]
+INFO: [Synth 8-6155] done synthesizing module 'AND4' (43#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:562]
+INFO: [Synth 8-6157] synthesizing module 'INV' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:36118]
+INFO: [Synth 8-6155] done synthesizing module 'INV' (44#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:36118]
+INFO: [Synth 8-6157] synthesizing module 'AND3' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:514]
+INFO: [Synth 8-6155] done synthesizing module 'AND3' (45#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:514]
+INFO: [Synth 8-6157] synthesizing module 'AND2' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:466]
+INFO: [Synth 8-6155] done synthesizing module 'AND2' (46#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:466]
+INFO: [Synth 8-6157] synthesizing module 'OR4' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:50006]
+INFO: [Synth 8-6155] done synthesizing module 'OR4' (47#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:50006]
+INFO: [Synth 8-6157] synthesizing module 'OR3' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49958]
+INFO: [Synth 8-6155] done synthesizing module 'OR3' (48#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49958]
+INFO: [Synth 8-6157] synthesizing module 'OR2' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49912]
+INFO: [Synth 8-6155] done synthesizing module 'OR2' (49#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49912]
+INFO: [Synth 8-6155] done synthesizing module 'MC14495_ZJU' (50#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/MC14495_ZJU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'LED_display' (51#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/LED_display.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Clkdiv' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/Clkdiv.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Clkdiv' (52#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/Clkdiv.v:2]
+INFO: [Synth 8-6157] synthesizing module 'music' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/music.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ROM_music' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_music.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_music' (53#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_music.v:2]
+INFO: [Synth 8-6157] synthesizing module 'divide_by12' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/music.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'divide_by12' (54#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/music.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'music' (55#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/music.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Top_module' (56#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Top_module.v:1]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port bubble_on
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port x[9]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port x[8]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port x[7]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port x[6]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port x[5]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port x[4]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port y[9]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port y[8]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port y[7]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2138.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2138.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2138.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+Release 14.7 - ngc2edif P_INT.20190617 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design P2S.ngc ...
+WARNING:NetListWriters:298 - No output is written to P2S.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file P2S.edif ...
+ngc2edif: Total memory usage is 4325148 kilobytes
+
+Reading core file 'C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/P2S.ngc' for (cell view 'P2S', library 'work')
+Parsing EDIF File [./.ngc2edfcache/P2S_ngc_c01df0e.edif]
+Finished Parsing EDIF File [./.ngc2edfcache/P2S_ngc_c01df0e.edif]
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/ip/ROM_Gameover_blk_mem_gen_0_0/ROM_Gameover_blk_mem_gen_0_0.dcp' for cell 'gameover_unit/rom_gameover/ROM_Gameover_i/ROM_Gameover'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/ip/ROM_Bubble_blk_mem_gen_0_0/ROM_Bubble_blk_mem_gen_0_0.dcp' for cell 'bubble_unit/rom_bubble_unit/ROM_Bubble_i/ROM_Bubble'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO/ip/ROM_JOJO_blk_mem_gen_0_0/ROM_JOJO_blk_mem_gen_0_0.dcp' for cell 'jojo_unit/jojo_unit/ROM_JOJO_i/ROM_JOJO'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO_overdrive/ip/ROM_JOJO_overdrive_blk_mem_gen_0_0/ROM_JOJO_overdrive_blk_mem_gen_0_0.dcp' for cell 'jojo_unit/jojo_overdrive_unit/ROM_JOJO_overdrive_i/ROM_JOJO_overdrive'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_crazy/ip/ROM_Mask_crazy_blk_mem_gen_0_0/ROM_Mask_crazy_blk_mem_gen_0_0.dcp' for cell 'mask_crazy_unit/mask_crazy_unit/ROM_Mask_crazy_i/ROM_Mask_crazy'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_normal/ip/ROM_Mask_normal_blk_mem_gen_0_0/ROM_Mask_normal_blk_mem_gen_0_0.dcp' for cell 'mask_top_unit/rom_mask_top_unit/ROM_Mask_normal_i/ROM_Mask_normal'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Background/ip/ROM_Background_blk_mem_gen_0_0/ROM_Background_blk_mem_gen_0_0.dcp' for cell 'background_unit/ROM_Background_i/ROM_Background'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gamecover/ip/ROM_Gamecover_blk_mem_gen_0_0/ROM_Gamecover_blk_mem_gen_0_0.dcp' for cell 'gamecover_unit/ROM_Gamecover_i/ROM_Gamecover'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.155 . Memory (MB): peak = 2138.711 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 637 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 12 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/XDC.xdc]
+Finished Parsing XDC File [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/XDC.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2241.840 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 116 instances were transformed.
+  AND2 => LUT2: 1 instance 
+  AND3 => LUT3: 11 instances
+  AND4 => LUT4: 9 instances
+  FD => FDRE: 66 instances
+  FDC => FDCE: 10 instances
+  INV => LUT1: 5 instances
+  OR2 => LUT2: 7 instances
+  OR3 => LUT3: 3 instances
+  OR4 => LUT4: 4 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 2241.840 ; gain = 103.129
+138 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2241.840 ; gain = 103.129
+write_schematic -format pdf -orientation portrait C:/Users/Raymond-Ziyue/Desktop/Proj/Report/schematic.pdf
+C:/Users/Raymond-Ziyue/Desktop/Proj/Report/schematic.pdf
+close_design
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gamecover/ROM_Gamecover.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Background/ROM_Background.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_normal/ROM_Mask_normal.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_crazy/ROM_Mask_crazy.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO_overdrive/ROM_JOJO_overdrive.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO/ROM_JOJO.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/ROM_Bubble.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/ROM_Gameover.bd]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k160tffg676-2L
+Top: Top_module
+WARNING: [Synth 8-6901] identifier 'DATA_BITS' is used before its declaration [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/P2S_IO.v:24]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2331.773 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top_module' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Top_module.v:1]
+	Parameter gamestart bound to: 3'b001 
+	Parameter gameover bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'FSM' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/FSM.v:1]
+	Parameter Initial bound to: 3'b000 
+	Parameter Start bound to: 3'b001 
+	Parameter Play bound to: 3'b010 
+	Parameter Collision bound to: 3'b011 
+	Parameter Gameover bound to: 3'b100 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/FSM.v:46]
+WARNING: [Synth 8-6014] Unused sequential element enter_reg_reg was removed.  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/FSM.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'FSM' (1#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/FSM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'GUI_Gameover' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/GUI_Gameover.v:1]
+	Parameter H_Range bound to: 640 - type: integer 
+	Parameter V_Range bound to: 480 - type: integer 
+	Parameter V_Deviation bound to: 100 - type: integer 
+	Parameter H_Deviation bound to: 192 - type: integer 
+	Parameter ROM_Width bound to: 256 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ROM_Gameover_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/hdl/ROM_Gameover_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Gameover' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/synth/ROM_Gameover.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Gameover_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Gameover_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Gameover_blk_mem_gen_0_0' (2#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Gameover_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Gameover' (3#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/synth/ROM_Gameover.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Gameover_wrapper' (4#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/hdl/ROM_Gameover_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (15) of module 'ROM_Gameover_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/GUI_Gameover.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'GUI_Gameover' (5#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/GUI_Gameover.v:1]
+INFO: [Synth 8-6157] synthesizing module 'GUI_Heart' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/GUI_Heart.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Heart' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_heart.v:1]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_heart.v:11]
+INFO: [Synth 8-226] default block is never used [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_heart.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Heart' (6#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_heart.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'GUI_Heart' (7#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/GUI_Heart.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Item_Bubble' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Item_Bubble.v:1]
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter waiting bound to: 1'b0 
+	Parameter respawn bound to: 1'b1 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Item_Bubble.v:76]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Bubble_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/hdl/ROM_Bubble_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Bubble' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/synth/ROM_Bubble.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Bubble_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Bubble_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Bubble_blk_mem_gen_0_0' (8#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Bubble_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Bubble' (9#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/synth/ROM_Bubble.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Bubble_wrapper' (10#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/hdl/ROM_Bubble_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (11) of module 'ROM_Bubble_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Item_Bubble.v:139]
+WARNING: [Synth 8-3848] Net bubble_on in module/entity Item_Bubble does not have driver. [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Item_Bubble.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Item_Bubble' (11#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Item_Bubble.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Judge_Collision' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Judge_Collision.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Judge_Collision' (12#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Judge_Collision.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Judge_Grounded' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Judge_Grounded.v:1]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter T_W bound to: 32 - type: integer 
+	Parameter T_H bound to: 32 - type: integer 
+	Parameter LA bound to: 19 - type: integer 
+	Parameter LB bound to: 13 - type: integer 
+	Parameter RA bound to: 11 - type: integer 
+	Parameter RB bound to: 5 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Judge_Grounded' (13#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Judge_Grounded.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Map_Platform' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Map_Platform.v:1]
+	Parameter Block_Width bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ROM_Wall' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Wall.v:1]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Wall.v:11]
+INFO: [Synth 8-226] default block is never used [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Wall.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Wall' (14#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Wall.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Block' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Block.v:1]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "block" *) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Block.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Block' (15#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Block.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Map_Platform' (16#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Map_Platform.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PS2' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/PS2.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/PS2.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'PS2' (17#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/PS2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Role_JOJO' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_JOJO.v:1]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter MIN_Y bound to: 16 - type: integer 
+	Parameter T_W bound to: 32 - type: integer 
+	Parameter T_H bound to: 64 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter still bound to: 2'b00 
+	Parameter left bound to: 2'b01 
+	Parameter right bound to: 2'b10 
+	Parameter standing bound to: 3'b000 
+	Parameter walking bound to: 3'b001 
+	Parameter jump_up bound to: 3'b010 
+	Parameter jump_higher bound to: 3'b011 
+	Parameter jump_down bound to: 3'b100 
+	Parameter TIME_START_X bound to: 800000 - type: integer 
+	Parameter TIME_STEP_X bound to: 6000 - type: integer 
+	Parameter TIME_MIN_X bound to: 500000 - type: integer 
+	Parameter TIME_START_Y bound to: 100000 - type: integer 
+	Parameter TIME_STEP_Y bound to: 8000 - type: integer 
+	Parameter TIME_MAX_Y bound to: 600000 - type: integer 
+	Parameter TIME_TERM_Y bound to: 250000 - type: integer 
+	Parameter BEGIN_COUNT_EXTRA bound to: 450000 - type: integer 
+	Parameter TILE_1_MAX bound to: 4000000 - type: integer 
+	Parameter TILE_2_MAX bound to: 8000000 - type: integer 
+	Parameter TILE_3_MAX bound to: 12000000 - type: integer 
+	Parameter TILE_4_MAX bound to: 16000000 - type: integer 
+	Parameter WALK_T_MAX bound to: 20000000 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_JOJO.v:102]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_JOJO.v:180]
+INFO: [Synth 8-6157] synthesizing module 'ROM_JOJO_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO/hdl/ROM_JOJO_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_JOJO' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO/synth/ROM_JOJO.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_JOJO_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_JOJO_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_JOJO_blk_mem_gen_0_0' (18#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_JOJO_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_JOJO' (19#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO/synth/ROM_JOJO.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_JOJO_wrapper' (20#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO/hdl/ROM_JOJO_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (14) of module 'ROM_JOJO_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_JOJO.v:308]
+INFO: [Synth 8-6157] synthesizing module 'ROM_JOJO_overdrive_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO_overdrive/hdl/ROM_JOJO_overdrive_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_JOJO_overdrive' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO_overdrive/synth/ROM_JOJO_overdrive.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_JOJO_overdrive_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_JOJO_overdrive_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_JOJO_overdrive_blk_mem_gen_0_0' (21#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_JOJO_overdrive_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_JOJO_overdrive' (22#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO_overdrive/synth/ROM_JOJO_overdrive.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_JOJO_overdrive_wrapper' (23#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO_overdrive/hdl/ROM_JOJO_overdrive_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (14) of module 'ROM_JOJO_overdrive_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_JOJO.v:309]
+INFO: [Synth 8-6155] done synthesizing module 'Role_JOJO' (24#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_JOJO.v:1]
+INFO: [Synth 8-6157] synthesizing module 'VGA' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/VGA.v:1]
+	Parameter H_Range bound to: 640 - type: integer 
+	Parameter L_Border bound to: 58 - type: integer 
+	Parameter R_Border bound to: 6 - type: integer 
+	Parameter H_Retrace bound to: 96 - type: integer 
+	Parameter H_Max bound to: 799 - type: integer 
+	Parameter H_Start bound to: 646 - type: integer 
+	Parameter H_End bound to: 741 - type: integer 
+	Parameter V_Range bound to: 480 - type: integer 
+	Parameter T_Border bound to: 43 - type: integer 
+	Parameter B_Border bound to: 0 - type: integer 
+	Parameter V_Retrace bound to: 2 - type: integer 
+	Parameter V_Max bound to: 524 - type: integer 
+	Parameter V_Start bound to: 480 - type: integer 
+	Parameter V_End bound to: 481 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'VGA' (25#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/VGA.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Role_Mask_crazy' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_crazy.v:1]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter T_W bound to: 32 - type: integer 
+	Parameter TIME_MAX bound to: 4000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ROM_Mask_crazy_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_crazy/hdl/ROM_Mask_crazy_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Mask_crazy' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_crazy/synth/ROM_Mask_crazy.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Mask_crazy_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Mask_crazy_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Mask_crazy_blk_mem_gen_0_0' (26#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Mask_crazy_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Mask_crazy' (27#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_crazy/synth/ROM_Mask_crazy.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Mask_crazy_wrapper' (28#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_crazy/hdl/ROM_Mask_crazy_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (11) of module 'ROM_Mask_crazy_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_crazy.v:76]
+WARNING: [Synth 8-5788] Register mask_crazy_x_reg_reg in module Role_Mask_crazy is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_crazy.v:33]
+WARNING: [Synth 8-5788] Register mask_crazy_y_reg_reg in module Role_Mask_crazy is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_crazy.v:34]
+WARNING: [Synth 8-5788] Register dir_reg_reg in module Role_Mask_crazy is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_crazy.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'Role_Mask_crazy' (29#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_crazy.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Role_Mask_top' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_top.v:1]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter T_W bound to: 32 - type: integer 
+	Parameter TIME_MAX bound to: 4600000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ROM_Mask_normal_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_normal/hdl/ROM_Mask_normal_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Mask_normal' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_normal/synth/ROM_Mask_normal.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Mask_normal_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Mask_normal_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Mask_normal_blk_mem_gen_0_0' (30#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Mask_normal_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Mask_normal' (31#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_normal/synth/ROM_Mask_normal.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Mask_normal_wrapper' (32#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_normal/hdl/ROM_Mask_normal_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (11) of module 'ROM_Mask_normal_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_top.v:86]
+WARNING: [Synth 8-5788] Register mask_top_x_reg_reg in module Role_Mask_top is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_top.v:37]
+WARNING: [Synth 8-5788] Register mask_top_y_reg_reg in module Role_Mask_top is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_top.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'Role_Mask_top' (33#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Role_Mask_bottom' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_bottom.v:1]
+	Parameter MAX_X bound to: 640 - type: integer 
+	Parameter MAX_Y bound to: 480 - type: integer 
+	Parameter LEFT bound to: 0 - type: integer 
+	Parameter RIGHT bound to: 1 - type: integer 
+	Parameter T_W bound to: 32 - type: integer 
+	Parameter TIME_MAX bound to: 4600000 - type: integer 
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (11) of module 'ROM_Mask_normal_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_bottom.v:87]
+WARNING: [Synth 8-5788] Register mask_bottom_x_reg_reg in module Role_Mask_bottom is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_bottom.v:37]
+WARNING: [Synth 8-5788] Register mask_bottom_y_reg_reg in module Role_Mask_bottom is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_bottom.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'Role_Mask_bottom' (34#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Role_Mask_bottom.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Background_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Background/hdl/ROM_Background_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Background' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Background/synth/ROM_Background.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Background_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Background_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Background_blk_mem_gen_0_0' (35#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Background_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Background' (36#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Background/synth/ROM_Background.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Background_wrapper' (37#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Background/hdl/ROM_Background_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (19) of module 'ROM_Background_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Top_module.v:154]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Gamecover_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gamecover/hdl/ROM_Gamecover_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Gamecover' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gamecover/synth/ROM_Gamecover.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ROM_Gamecover_blk_mem_gen_0_0' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Gamecover_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Gamecover_blk_mem_gen_0_0' (38#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/.Xil/Vivado-17960-LAPTOP-UIMKI226/realtime/ROM_Gamecover_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Gamecover' (39#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gamecover/synth/ROM_Gamecover.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_Gamecover_wrapper' (40#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gamecover/hdl/ROM_Gamecover_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (19) of module 'ROM_Gamecover_wrapper' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Top_module.v:155]
+INFO: [Synth 8-6157] synthesizing module 'LED_display' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/LED_display.v:1]
+INFO: [Synth 8-6157] synthesizing module 'P2S' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/P2S_IO.v:21]
+	Parameter DATA_BITS bound to: 64 - type: integer 
+	Parameter DATA_COUNT_BITS bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'P2S' (41#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/P2S_IO.v:21]
+INFO: [Synth 8-6157] synthesizing module 'B2BCD' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/B2BCD.v:1]
+	Parameter idle bound to: 1'b0 
+	Parameter convert bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'B2BCD' (42#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/B2BCD.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MC14495_ZJU' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/MC14495_ZJU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'AND4' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:562]
+INFO: [Synth 8-6155] done synthesizing module 'AND4' (43#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:562]
+INFO: [Synth 8-6157] synthesizing module 'INV' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:36118]
+INFO: [Synth 8-6155] done synthesizing module 'INV' (44#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:36118]
+INFO: [Synth 8-6157] synthesizing module 'AND3' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:514]
+INFO: [Synth 8-6155] done synthesizing module 'AND3' (45#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:514]
+INFO: [Synth 8-6157] synthesizing module 'AND2' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:466]
+INFO: [Synth 8-6155] done synthesizing module 'AND2' (46#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:466]
+INFO: [Synth 8-6157] synthesizing module 'OR4' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:50006]
+INFO: [Synth 8-6155] done synthesizing module 'OR4' (47#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:50006]
+INFO: [Synth 8-6157] synthesizing module 'OR3' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49958]
+INFO: [Synth 8-6155] done synthesizing module 'OR3' (48#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49958]
+INFO: [Synth 8-6157] synthesizing module 'OR2' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49912]
+INFO: [Synth 8-6155] done synthesizing module 'OR2' (49#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49912]
+INFO: [Synth 8-6155] done synthesizing module 'MC14495_ZJU' (50#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/MC14495_ZJU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'LED_display' (51#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/LED_display.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Clkdiv' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/Clkdiv.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Clkdiv' (52#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/Clkdiv.v:2]
+INFO: [Synth 8-6157] synthesizing module 'music' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/music.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ROM_music' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_music.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_music' (53#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_music.v:2]
+INFO: [Synth 8-6157] synthesizing module 'divide_by12' [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/music.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'divide_by12' (54#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/music.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'music' (55#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/music.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Top_module' (56#1) [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/Top_module.v:1]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port bubble_on
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port x[9]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port x[8]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port x[7]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port x[6]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port x[5]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port x[4]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port y[9]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port y[8]
+WARNING: [Synth 8-3331] design Item_Bubble has unconnected port y[7]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2331.773 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2331.773 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2331.773 ; gain = 0.000
+---------------------------------------------------------------------------------
+Reading core file 'C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Framework/P2S.ngc' for (cell view 'P2S', library 'work')
+Parsing EDIF File [./.ngc2edfcache/P2S_ngc_c01df0e.edif]
+Finished Parsing EDIF File [./.ngc2edfcache/P2S_ngc_c01df0e.edif]
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gameover/ip/ROM_Gameover_blk_mem_gen_0_0/ROM_Gameover_blk_mem_gen_0_0.dcp' for cell 'gameover_unit/rom_gameover/ROM_Gameover_i/ROM_Gameover'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Bubble/ip/ROM_Bubble_blk_mem_gen_0_0/ROM_Bubble_blk_mem_gen_0_0.dcp' for cell 'bubble_unit/rom_bubble_unit/ROM_Bubble_i/ROM_Bubble'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO/ip/ROM_JOJO_blk_mem_gen_0_0/ROM_JOJO_blk_mem_gen_0_0.dcp' for cell 'jojo_unit/jojo_unit/ROM_JOJO_i/ROM_JOJO'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_JOJO_overdrive/ip/ROM_JOJO_overdrive_blk_mem_gen_0_0/ROM_JOJO_overdrive_blk_mem_gen_0_0.dcp' for cell 'jojo_unit/jojo_overdrive_unit/ROM_JOJO_overdrive_i/ROM_JOJO_overdrive'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_crazy/ip/ROM_Mask_crazy_blk_mem_gen_0_0/ROM_Mask_crazy_blk_mem_gen_0_0.dcp' for cell 'mask_crazy_unit/mask_crazy_unit/ROM_Mask_crazy_i/ROM_Mask_crazy'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Mask_normal/ip/ROM_Mask_normal_blk_mem_gen_0_0/ROM_Mask_normal_blk_mem_gen_0_0.dcp' for cell 'mask_top_unit/rom_mask_top_unit/ROM_Mask_normal_i/ROM_Mask_normal'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Background/ip/ROM_Background_blk_mem_gen_0_0/ROM_Background_blk_mem_gen_0_0.dcp' for cell 'background_unit/ROM_Background_i/ROM_Background'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Rom/ROM_Gamecover/ip/ROM_Gamecover_blk_mem_gen_0_0/ROM_Gamecover_blk_mem_gen_0_0.dcp' for cell 'gamecover_unit/ROM_Gamecover_i/ROM_Gamecover'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.170 . Memory (MB): peak = 2331.773 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 637 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 12 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/XDC.xdc]
+Finished Parsing XDC File [C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/Code/XDC.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2391.566 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 116 instances were transformed.
+  AND2 => LUT2: 1 instance 
+  AND3 => LUT3: 11 instances
+  AND4 => LUT4: 9 instances
+  FD => FDRE: 66 instances
+  FDC => FDCE: 10 instances
+  INV => LUT1: 5 instances
+  OR2 => LUT2: 7 instances
+  OR3 => LUT3: 3 instances
+  OR4 => LUT4: 4 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 2391.566 ; gain = 59.793
+138 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 2391.566 ; gain = 59.793
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jan  5 11:57:58 2020...

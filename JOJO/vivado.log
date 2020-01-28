@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Jan  6 14:49:46 2020
+# Process ID: 4332
+# Current directory: C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14660 C:\Users\Raymond-Ziyue\Desktop\Proj\JOJO\JOJO.xpr
+# Log file: C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/vivado.log
+# Journal file: C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/JOJO.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 697.320 ; gain = 67.781
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Mon Jan  6 14:50:46 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/JOJO.runs/synth_1/runme.log
+[Mon Jan  6 14:50:46 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/JOJO.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7k160tffg676-2L
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.143 . Memory (MB): peak = 1091.035 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 843 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.985 . Memory (MB): peak = 1822.449 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.985 . Memory (MB): peak = 1822.449 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1822.449 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:32 ; elapsed = 00:00:24 . Memory (MB): peak = 1973.543 ; gain = 1116.234
+close_design
+file copy -force C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/JOJO.runs/impl_1/Top_module.bit C:/Users/Raymond-Ziyue/Desktop/Proj/JOJO/JOJO.bit
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jan  6 15:14:00 2020...

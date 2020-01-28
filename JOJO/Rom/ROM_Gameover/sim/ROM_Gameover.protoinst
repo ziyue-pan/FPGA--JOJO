@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"ROM_Gameover": {
+			"proto_instances": {
+			}
+		}
+	}
+}

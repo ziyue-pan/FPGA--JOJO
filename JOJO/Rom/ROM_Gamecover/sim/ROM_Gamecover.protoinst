@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"ROM_Gamecover": {
+			"proto_instances": {
+			}
+		}
+	}
+}

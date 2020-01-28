@@ -1,0 +1,100 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x696E3199696E3199",
+      "device": "xc7k160tffg676-2L",
+      "name": "ROM_Gameover",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "ROM_Gameover": ""
+    },
+    "ports": {
+      "addr": {
+        "direction": "I",
+        "left": "14",
+        "right": "0"
+      },
+      "clk": {
+        "direction": "I"
+      },
+      "dout": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      }
+    },
+    "components": {
+      "ROM_Gameover": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "ROM_Gameover_blk_mem_gen_0_0",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../gameover.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Port_B_Clock": {
+            "value": "0"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "0"
+          },
+          "Port_B_Write_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "32768"
+          },
+          "Write_Width_A": {
+            "value": "12"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      }
+    },
+    "nets": {
+      "addr_1": {
+        "ports": [
+          "addr",
+          "ROM_Gameover/addra"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "ROM_Gameover/clka"
+        ]
+      },
+      "ROM_Gameover_douta": {
+        "ports": [
+          "ROM_Gameover/douta",
+          "dout"
+        ]
+      }
+    }
+  }
+}

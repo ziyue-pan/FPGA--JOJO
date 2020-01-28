@@ -1,0 +1,91 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x7B9735227B973522",
+      "device": "xc7k160tffg676-2L",
+      "name": "ROM_Mask_crazy",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "ROM_Mask_crazy": ""
+    },
+    "ports": {
+      "addr": {
+        "direction": "I",
+        "left": "10",
+        "right": "0"
+      },
+      "clk": {
+        "direction": "I"
+      },
+      "dout": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      }
+    },
+    "components": {
+      "ROM_Mask_crazy": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "ROM_Mask_crazy_blk_mem_gen_0_0",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../mask_crazy.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_ROM"
+          },
+          "Port_A_Write_Rate": {
+            "value": "0"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "2048"
+          },
+          "Write_Width_A": {
+            "value": "12"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      }
+    },
+    "nets": {
+      "addr_1": {
+        "ports": [
+          "addr",
+          "ROM_Mask_crazy/addra"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "ROM_Mask_crazy/clka"
+        ]
+      },
+      "ROM_Mask_crazy_douta": {
+        "ports": [
+          "ROM_Mask_crazy/douta",
+          "dout"
+        ]
+      }
+    }
+  }
+}
