@@ -7,3 +7,11 @@ Hardware description: *SWORD* experiment box (Kintex-7 chip)
 
 **Rom Process** folder is the folder for auxiliary python script which transcript **BMP** images to `.coe` init file.
 
+## Build
+
+```bash
+$ git clone https://github.com/PAN-Ziyue/FPGA--JOJO.git
+$ cd ./JOJO
+JOJO.xpr
+sythesize & implement -> write bitstream -> program target
+```
