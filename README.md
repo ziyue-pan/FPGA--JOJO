@@ -1,6 +1,6 @@
 # FPGA--JOJO
 
-![](intro.gif)
+![intro](./intro.gif)
 
  This is the final project of  Digital Logic Design course in ZJU.
 
