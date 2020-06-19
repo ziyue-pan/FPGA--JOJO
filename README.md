@@ -1,4 +1,7 @@
 # FPGA--JOJO
+
+![](intro.gif)
+
  This is the final project of  Digital Logic Design course in ZJU.
 
 **JOJO** folder is the source code folder. The project should be opened by **vivado**.
